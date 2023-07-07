@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Kumbh Sans", sans-serif sans-serif;
+}
+
+main {
+  display: flex;
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+/*# sourceMappingURL=styles.css.map */
