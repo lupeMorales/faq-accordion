@@ -16,10 +16,16 @@ main {
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   font-size: 1.2em;
 }
+@media all and (min-width: 1440px) {
+  main {
+    font-size: 1.6em;
+  }
+}
 
 .wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
   width: 90%;
   margin: auto;
@@ -38,7 +44,10 @@ main {
 .accordion {
   margin: 100px 0 40px;
   display: flex;
+  /*   justify-content: center;
+  align-items: center; */
   flex-direction: column;
+  max-width: 400px;
   gap: 30px;
 }
 @media all and (min-width: 1440px) {
@@ -52,24 +61,30 @@ main {
   text-align: center;
   text-transform: uppercase;
 }
-
-.item {
+@media all and (min-width: 1440px) {
+  .accordion__title {
+    text-align: start;
+  }
+}
+.accordion .item {
+  position: relative;
+  width: 100%;
   overflow: hidden;
 }
-.item input {
+.accordion .item input {
   position: absolute;
   width: 100%;
   height: 100%;
   opacity: 0;
 }
-.item__title {
+.accordion .item__title {
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
   color: hsl(237, 12%, 33%);
   cursor: pointer;
 }
-.item__title::after {
+.accordion .item__title::after {
   content: "❯";
   width: 1em;
   height: 1em;
@@ -77,7 +92,7 @@ main {
   text-align: center;
   transition: all 0.35s;
 }
-.item__content {
+.accordion .item__content {
   border-bottom: 1px solid hsl(240, 5%, 91%);
   color: hsl(240, 6%, 50%);
   max-height: 0;
@@ -120,7 +135,8 @@ main {
   position: absolute;
   top: calc(50% - 45px);
   left: calc(15% + 5px);
-  max-width: 140px;
+  max-width: 180px;
+  min-width: 140px;
   width: 100%;
   object-fit: cover;
   z-index: 5;
