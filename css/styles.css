@@ -18,6 +18,8 @@ main {
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 90%;
   margin: auto;
@@ -25,8 +27,17 @@ main {
   border-radius: 30px;
   background-color: #fff;
 }
+@media all and (min-width: 1440px) {
+  .wrapper {
+    width: 50%;
+    align-items: end;
+    padding: 40px;
+    padding-top: 100px;
+    overflow: hidden;
+  }
+}
 
-.img {
+.img__mobile {
   position: absolute;
   bottom: calc(100% - 60px);
   right: calc(50% - 100px);
@@ -35,12 +46,39 @@ main {
   object-fit: cover;
   filter: drop-shadow(10px 30px 0 hsl(240, 5%, 91%));
 }
+@media all and (min-width: 1440px) {
+  .img__mobile {
+    display: none;
+  }
+}
+
+.img__desktop {
+  position: absolute;
+  display: none;
+  bottom: calc(50% - 260px);
+  left: -88px;
+  max-width: 600px;
+  width: 100%;
+  object-fit: cover;
+  filter: drop-shadow(-55px 120px 0 hsl(240, 5%, 91%));
+}
+@media all and (min-width: 1440px) {
+  .img__desktop {
+    display: block;
+  }
+}
 
 .accordion {
-  margin: 100px 0 20px;
+  margin: 100px 0 40px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+@media all and (min-width: 1440px) {
+  .accordion {
+    width: 50%;
+    padding-right: 20px;
+  }
 }
 .accordion__title {
   text-align: center;
@@ -59,12 +97,9 @@ main {
 .item__title {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 10px;
   color: hsl(237, 12%, 33%);
   cursor: pointer;
-  padding-bottom: 10px;
-}
-.item__title:hover {
-  color: hsl(238, 29%, 16%);
 }
 .item__title::after {
   content: "❯";
@@ -83,6 +118,7 @@ main {
 
 input:checked + .item__title {
   color: hsl(238, 29%, 16%);
+  font-weight: bold;
 }
 input:checked + .item__title::after {
   transform: rotate(90deg);
