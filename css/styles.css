@@ -42,12 +42,10 @@ main {
 }
 
 .accordion {
-  margin: 100px 0 40px;
+  margin: 100px 0 30px;
   display: flex;
-  /*   justify-content: center;
-  align-items: center; */
   flex-direction: column;
-  max-width: 400px;
+  max-width: 500px;
   gap: 30px;
 }
 @media all and (min-width: 1440px) {
@@ -129,21 +127,32 @@ main {
     display: block;
   }
 }
+@media all and (min-width: 1880px) {
+  .img__desktop {
+    max-width: 500px;
+  }
+}
 
 .img__box {
   display: none;
   position: absolute;
   top: calc(50% - 45px);
-  left: calc(15% + 5px);
+  left: calc(15% - 15px);
   max-width: 180px;
   min-width: 140px;
   width: 100%;
   object-fit: cover;
-  z-index: 5;
+  z-index: 1;
 }
 @media all and (min-width: 1440px) {
   .img__box {
     display: block;
+  }
+}
+@media all and (min-width: 1880px) {
+  .img__box {
+    top: calc(50% - 67px);
+    left: calc(15% + 15px);
   }
 }
 
