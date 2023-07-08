@@ -1,7 +1,5 @@
 # FAQ accordion card
 
-![Design preview for the FAQ accordion card coding challenge](./design/desktop-preview.jpg)
-
 ## Welcome! 👋
 
 This is my solution to the [FAQ Accordion card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam).
@@ -22,8 +20,7 @@ Your users should be able to:
 
 ### Screenshot
 
-
-![mockup](./assets/images/Natural%20Mockup%20Freebie%20Lead%20Magnet%20Facebook%20Post.png)
+![mockup](./design/FAQ-accordion-mockup.png)
 
 ### Links
 
